@@ -12,3 +12,5 @@
 8. My腾讯微博：http://t.qq.com/huanggaowuqiqiang 
 9. My邮箱：jellon.wu@gmail.com
 10. My邮箱：cino.wu@gmail.com
+
+友情附赠国外网友制作的Git Cheat Sheet，建议打印出来备用：[Git Cheat Sheet](http://www.git-tower.com/blog/assets/2013-05-22-git-cheat-sheet/cheat-sheet-large01.png)
