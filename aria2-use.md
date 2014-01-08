@@ -65,3 +65,10 @@ make[2]: Leaving directory `/home/kaifa/wujintao/aria2-1.18.3/po'
 参见：<br/>
 [http://wiki.ubuntu.org.cn/Aria2](http://wiki.ubuntu.org.cn/Aria2)<br>
 [https://linuxtoy.org/archives/aria2.html](https://linuxtoy.org/archives/aria2.html)
+
+**下载demo连接**
+<pre>
+http://jaist.dl.sourceforge.net/project/aria2/stable/aria2-1.18.3/aria2-1.18.3-win-32bit-build1.zip
+http://jaist.dl.sourceforge.net/project/aria2cremote/stable/0.1.1/Aria2cRemoteControl-0.1.1-win32.exe
+http://jaist.dl.sourceforge.net/project/aria2web/Aria2Web_0.1.zip
+</pre>
