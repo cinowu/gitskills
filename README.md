@@ -124,7 +124,8 @@ C.嵌套列表如下：
 
 ###8.超链接、图片链接
 >自动链接格式：`<http://example.com/>`  就是在链接两边加上<和>  
->自动链接：`<sample@126.com>`  `<http://www.baidu.com>`
+>自动链接：`<sample@126.com>`  `<http://www.baidu.com>`  
+
 <pre>
 文字链接格式：This is an [example link](http://example.com/).
 文字链接：[图灵社区](http://www.ituring.com.cn)
