@@ -137,16 +137,12 @@ C.嵌套列表如下：
 索引链接：
 [图灵社区][1]
 ![图灵社区Logo][2]
-
 [1]:http://www.ituring.com.cn
 [2]:http://www.ituring.com.cn/Content/img/Turing.Gif
 
-
 或者：
-
 I get 10 times more traffic from [Google][1] than from
 [Yahoo][2] or [MSN][3].
-
 [1]: http://google.com/ "Google"
 [2]: http://search.yahoo.com/ "Yahoo Search"
 [3]: http://search.msn.com/ "MSN Search"
@@ -154,9 +150,7 @@ I get 10 times more traffic from [Google][1] than from
 或者：
 I start my morning with a cup of coffee and
 [The New York Times][NY Times].
-
 [ny times]: http://www.nytimes.com/
-
 </pre>
 
 ###9.转义普通字符
