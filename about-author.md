@@ -19,3 +19,7 @@
 8. My腾讯微博：http://t.qq.com/huanggaowuqiqiang 
 9. My邮箱：jellon.wu@gmail.com
 10. My邮箱：cino.wu@gmail.com
+
+
+作者：[@岁月静好--似水流年](http://weibo.com/u/1747720793)  
+2014-01-15 星期三 10:53:56 
