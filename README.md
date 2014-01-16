@@ -164,7 +164,8 @@ Windows下要使用很多Linux/Unix的工具时，需要Cygwin这样的模拟环
 
 也可以在googlecode上创建git协议的publis repository  
 参见我用cino.wu账户在googlecode上创建的git协议的项目<https://code.google.com/p/cino-learn-svn/>  
-<https://code.google.com/p/cino-learn-svn/source/checkout>
+<https://code.google.com/p/cino-learn-svn/source/checkout>  
+创建google code project入口：<https://code.google.com/intl/zh-HK/>
 
 
 作者：[@岁月静好--似水流年](http://weibo.com/u/1747720793)<br/>
