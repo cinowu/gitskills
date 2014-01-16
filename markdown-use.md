@@ -155,5 +155,28 @@ _   底线
 !   惊叹号
 </pre>
 
+###10.关于表格
+A.关于表格的处理，网上有人说了这么一种方式：  
+
+
+1. 从word或excel中复制表格
+1. 打开[此链接](http://pressbin.com/tools/excel_to_html_table/index.html)
+1. 贴上复制的文字，然后按convert，就会得到这个表格的代码
+
+
+以上这种做法生成的HTML代码粘贴到MarkDownPad的确能预览，方法可行，就是麻烦
+
+B.我更倾向于另一种方式：  
+这种方式得到的结果虽然不是HTML代码，也不能在MarkDownPad预览，
+但是提交到github上就是标准表格，这就是万能的[Tables Generator](http://www.tablesgenerator.com/)
+
+  
+Tables Generator 支持四种格式：LaTeX、HTML、Markdown、TEXT，先在 Table > Set size 中设置表格大小，然后填充数据，设置格式，就能在页面下面找到生成的结果，将结果复制到md文件中即可  
+
+因为本文讲的是MarkDown，所以用<http://www.tablesgenerator.com/markdown_tables>这个啦
+
+
+
+
 作者：[@岁月静好--似水流年](http://weibo.com/u/1747720793)<br/>
 2014-01-15 星期三 10:45:16 
