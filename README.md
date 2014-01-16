@@ -159,7 +159,12 @@ Windows下要使用很多Linux/Unix的工具时，需要Cygwin这样的模拟环
   你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。
 
 #BTW
-友情附赠国外网友制作的Git Cheat Sheet，建议打印出来备用：[Git Cheat Sheet](http://www.git-tower.com/blog/assets/2013-05-22-git-cheat-sheet/cheat-sheet-large01.png)
+友情附赠国外网友制作的Git Cheat Sheet，建议打印出来备用：[Git Cheat Sheet](http://www.git-tower.com/blog/assets/2013-05-22-git-cheat-sheet/cheat-sheet-large01.png)  
+
+
+也可以在googlecode上创建git协议的publis repository  
+参见我用cino.wu账户在googlecode上创建的git协议的项目<https://code.google.com/p/cino-learn-svn/>  
+<https://code.google.com/p/cino-learn-svn/source/checkout>
 
 
 作者：[@岁月静好--似水流年](http://weibo.com/u/1747720793)<br/>
