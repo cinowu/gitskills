@@ -1,3 +1,15 @@
+##MarkDown资源
+1. Markdown项目主页：<http://daringfireball.net/projects/markdown/>
+1. Markdown语法说明（中文版）：<http://wowubuntu.com/markdown/>
+##Markdown 工具：
+1. Windows：MarkdownPad, MEditor
+1. Linux：ReText
+1. Mac：Mou
+1. Chrome插件：Made, Markdown Here
+1. Sublime Text 2: 跨平台编辑器，可通过插件支持Markdown
+1. Pandoc: 强大的文本编译工具，支持各种文档格式互转
+
+
 ##提示:本人整理MarkDown语法O(∩_∩)O~，往下看##
 
 ###1.分割线：
