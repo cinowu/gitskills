@@ -304,7 +304,10 @@ B.我更倾向于另一种方式：
   
 Tables Generator 支持四种格式：LaTeX、HTML、Markdown、TEXT，先在 Table > Set size 中设置表格大小，然后填充数据，设置格式，就能在页面下面找到生成的结果，将结果复制到md文件中即可  
 
-因为本文讲的是MarkDown，所以用<http://www.tablesgenerator.com/markdown_tables>这个啦
+因为本文讲的是MarkDown，所以用<http://www.tablesgenerator.com/markdown_tables>这个啦  
+
+###最后
+至于为什么markdown能够识别出来"##"为未标题,"---"为横线，你可以看它的css：<https://github.com/mrcoles/markdown-css/blob/master/markdown.css>，看过之后你就明白啦O(∩_∩)O~
 
 
 
