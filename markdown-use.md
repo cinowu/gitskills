@@ -241,7 +241,52 @@ _   底线
 !   惊叹号
 </pre>
 
-###10.关于表格
+###10.关于代码块和着色
+
+
+1）Markdown 会用`<pre>` 和 `<code>`标签来把代码区块包起来，这种情况代码不会着色，在MarkDownDad可以预览出效果。  
+用法`<pre><code>代码</code></pre>`.
+
+2）使用格式如下  
+<pre>
+```java
+
+代码贴在中间 
+ 
+ ```
+</pre>
+注意上面的"`"符号是键盘数字1左边那个键敲出来的，并且是什么语言就写什么,我是java开所以在那开头的三个符号之后就跟上了java,当然可以将java换成c,python,ruby,go等，markdown会自动着色，但是在MarkDownDad编辑器中看不出来预览效果  
+实例如下：
+
+
+```java
+public String callSGCCService(String operationName,String inputXML,String serviceName,String serverContextRoot)
+    {
+        StringBuilder result=null;
+        try
+        {
+            String endpoint = serverContextRoot+"/services/"+serviceName;
+            Service service = new Service();// 创建一个服务(service)调用(call)
+            Call call = (Call)service.createCall();// 通过service创建call对象
+            call.setTargetEndpointAddress(new java.net.URL(endpoint));// 设置service所在URL
+            call.setOperationName(new QName("http://service.yupont.com",operationName));
+            call.setUseSOAPAction(true);
+            String result1 = (String)call.invoke(new Object[] {inputXML});
+            System.out.println(result1);
+            result=new StringBuilder(result1);
+            result.append("@@@@@");
+            result.append(XMLUtil.getNodeTxtByNodeName(XMLUtil.strToXML(result1).getRootElement(), "URL"));
+        }
+        catch (Exception e)
+        {
+            System.err.println(e.toString());
+        }
+        return result.toString();
+    }
+```
+
+
+###11.关于表格
 A.关于表格的处理，网上有人说了这么一种方式：  
 
 
