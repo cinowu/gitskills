@@ -168,5 +168,9 @@ Windows下要使用很多Linux/Unix的工具时，需要Cygwin这样的模拟环
 创建google code project入口：<https://code.google.com/intl/zh-HK/>
 
 
+#PS
+创建在github上的站点，定制自己的域名：<http://pages.github.com/>  
+我的已经建好了<http://cinowu.github.io>
+
 作者：[@岁月静好--似水流年](http://weibo.com/u/1747720793)<br/>
 2014-01-15 星期三 10:45:21 
