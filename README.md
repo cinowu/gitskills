@@ -12,6 +12,9 @@ Windows下要使用很多Linux/Unix的工具时，需要Cygwin这样的模拟环
 - Git Bash 乱码解决方法，bash窗口输入： 	git config --global i18n.commitencoding utf-8
 - Git Gui  乱码解决方法，bash窗口输入：    git config --global gui.encoding utf-8
 
+###另外github官方的客户端也很棒<http://windows.github.com/>
+
+
 #使用Git(参考雪峰童鞋的)  
 ##自报家门
 >安装完成后，还需要最后一步设置，在命令行输入：
