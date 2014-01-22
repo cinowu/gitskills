@@ -14,6 +14,8 @@ Windows下要使用很多Linux/Unix的工具时，需要Cygwin这样的模拟环
 
 ###另外github官方的客户端也很棒<http://windows.github.com/>
 
+github官方教程：<http://try.github.io/levels/1/challenges/1>
+
 
 #使用Git(参考雪峰童鞋的)  
 ##自报家门
