@@ -413,8 +413,8 @@ Octopress 文章多了编译难免很慢
 ###pelican（python）
 <http://www.lizherui.com/pages/2013/08/17/build_blog.html#comment-1082841744>
 
-
-
+###nico(node.js)
+<http://lab.lepture.com/nico/zh/>
 
 当你开始搭建一个个人博客的时候，会出现类似这么多的博客系统干扰你，我要坚持搞好jekyll!!!
 
@@ -438,6 +438,7 @@ Octopress 文章多了编译难免很慢
 ---
 
 #用Jekyll构建基于bootstrap模板
+<http://jekyllbootstrap.com/usage/jekyll-quick-start.html>
 ##下载模板
 1.从github下载模板
 >git clone https://github.com/plusjade/jekyll-bootstrap.git jekyll
@@ -604,3 +605,476 @@ Creating new page: ./pages/about/index.html
 本文参考自：<http://blog.fens.me/jekyll-bootstarp-github/>
 
 **注意**我们前面两次讲到的都是本地更改后，github上创建一个新的库然后提交，都是基于项目首页的，如果已经提交之后再改，那么每次改之前都要在本地git pull origin gh-pages一下最新的变动
+
+---
+
+
+#开始创建站点博客了（非项目主页）  
+<http://jekyllbootstrap.com/usage/jekyll-quick-start.html>
+
+##在github上创建站点
+在你自己的github主页创建新的Repository，命名为cinowu.github.io，具体参见<http://pages.github.com/>
+
+##安装Jekyll-Bootstrap
+>git clone git@github.com:plusjade/jekyll-bootstrap.git cinowu.github.io
+
+>cd cinowu.github.io
+
+关联到远端github仓库
+>git remote set-url origin git@github.com:cinowu/cinowu.github.io.git
+
+
+将bootstrap文件推送到github仓库
+>git pull origin master
+>
+>git push origin master
+
+等待几分钟看看<http://cinowu.github.io/>吧，已经是默认的bootstrap主页了
+
+##创建post和page
+这个过程（关于创建页面和本地调试jekyll）可以参见之前讲的`用Jekyll构建基于bootstrap模板`这篇文章
+
+##修改信息
+可以通过cinowu.github.io\_includes\themes\twitter\default.html修改底部信息
+```html
+ <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} 本博客由<a href="http://weibo.com/u/1747720793" target="_blank" title="Author's Sina Wibo Main Page">吴锦涛先生</a>基于<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          和<a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>构建
+        </p>
+      </footer>
+```
+
+修改_config.yml
+<pre>
+title : 吴锦涛的个人博客
+tagline: 入则孝-出则悌-谨而信-泛爱众-而亲仁
+author :
+  name : Jellon Wu
+  email : jellon.wu@gmail.com
+  github : cinowu
+  twitter : jellonwu
+  feedburner : jellonwu
+production_url : http://cinowu.github.io
+</pre>
+无论任何时候主题都可以引用以上这些变量
+注意，这里不用设置BASE_PATH这个变量，项目主页会用到
+
+修改网站首页index.md
+
+##删除bootstrap自带文章post
+> rm -rf _posts/core-samples
+
+##使用bootstrap主题
+可以通过<http://themes.jekyllbootstrap.com/>或者<http://layouts-the.me.s3-website-us-east-1.amazonaws.com/>看到官方最新的主题  
+看到官网的主题比较有限，我选择了<http://themes.jekyllbootstrap.com/preview/the-program/>这个主题，它在github上的地址<https://github.com/jekyllbootstrap/theme-the-program>
+
+<https://github.com/pizn/kunka>  
+<http://www.zhanxin.info/jekyll/2013-08-11-jekyll-theme-kunka.html>  
+
+<https://github.com/mytharcher/SimpleGray>
+
+###安装最新主题
+>rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"
+
+或者你从github上已经下载了主题包，那么直接手动放在./_theme_packages目录里也一样，然后执行如下：
+>rake theme:install name="THEME-NAME"
+
+作为友好提示，下载安装完成后，命令行会友好的提示要不要切换到最新主题，选择y即可
+<pre>
+Administrator@PC121106ZS04 /f/cinowu.github.io (master)
+$ rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"
+Cloning into './_theme_packages/_tmp'...
+remote: Reusing existing pack: 40, done.
+remote: Total 40 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (40/40), done.
+Checking connectivity... done.
+mv ./_theme_packages/_tmp ./_theme_packages/the-program
+mkdir -p ./assets/themes/the-program/css
+cp -r ./_theme_packages/the-program/assets/themes/the-program/css/style.css ./assets/themes/the-program/css/style.css
+mkdir -p ./assets/themes/the-program/css
+cp -r ./_theme_packages/the-program/assets/themes/the-program/css/style.less ./assets/themes/the-program/css/style.less
+mkdir -p ./assets/themes/the-program/css
+cp -r ./_theme_packages/the-program/assets/themes/the-program/css/_base.less ./assets/themes/the-program/css/_base.less
+mkdir -p ./assets/themes/the-program/css
+cp -r ./_theme_packages/the-program/assets/themes/the-program/css/_helper.less ./assets/themes/the-program/css/_helper.less
+mkdir -p ./assets/themes/the-program/css
+cp -r ./_theme_packages/the-program/assets/themes/the-program/css/_less-base.less ./assets/themes/the-program/css/_less-base.less
+mkdir -p ./assets/themes/the-program/css
+cp -r ./_theme_packages/the-program/assets/themes/the-program/css/_mediaqueries.less ./assets/themes/the-program/css/_mediaqueries
+.less
+mkdir -p ./assets/themes/the-program/css
+cp -r ./_theme_packages/the-program/assets/themes/the-program/css/_module.less ./assets/themes/the-program/css/_module.less
+mkdir -p ./assets/themes/the-program/css
+cp -r ./_theme_packages/the-program/assets/themes/the-program/css/_syntaxhighlighter.less ./assets/themes/the-program/css/_syntaxh
+ighlighter.less
+mkdir -p ./assets/themes/the-program/font
+cp -r ./_theme_packages/the-program/assets/themes/the-program/font/UbuntuMono-B-webfont.eot ./assets/themes/the-program/font/Ubunt
+uMono-B-webfont.eot
+mkdir -p ./assets/themes/the-program/font
+cp -r ./_theme_packages/the-program/assets/themes/the-program/font/UbuntuMono-B-webfont.svg ./assets/themes/the-program/font/Ubunt
+uMono-B-webfont.svg
+mkdir -p ./assets/themes/the-program/font
+cp -r ./_theme_packages/the-program/assets/themes/the-program/font/UbuntuMono-B-webfont.ttf ./assets/themes/the-program/font/Ubunt
+uMono-B-webfont.ttf
+mkdir -p ./assets/themes/the-program/font
+cp -r ./_theme_packages/the-program/assets/themes/the-program/font/UbuntuMono-B-webfont.woff ./assets/themes/the-program/font/Ubun
+tuMono-B-webfont.woff
+mkdir -p ./assets/themes/the-program/skin
+cp -r ./_theme_packages/the-program/assets/themes/the-program/skin/100-90-5-monochrome.png ./assets/themes/the-program/skin/100-90
+-5-monochrome.png
+mkdir -p ./_includes/themes/the-program
+cp -r ./_theme_packages/the-program/_includes/themes/the-program/default.html ./_includes/themes/the-program/default.html
+mkdir -p ./_includes/themes/the-program
+cp -r ./_theme_packages/the-program/_includes/themes/the-program/page.html ./_includes/themes/the-program/page.html
+mkdir -p ./_includes/themes/the-program
+cp -r ./_theme_packages/the-program/_includes/themes/the-program/post.html ./_includes/themes/the-program/post.html
+mkdir -p ./_includes/themes/the-program
+cp -r ./_theme_packages/the-program/_includes/themes/the-program/settings.yml ./_includes/themes/the-program/settings.yml
+=> the-program theme has been installed!
+=> ---
+=> Want to switch themes now? [y/n] y
+Generating 'the-program' layout: default.html
+Generating 'the-program' layout: page.html
+Generating 'the-program' layout: post.html
+=> Theme successfully switched!
+=> Reload your web-page to check it out =)
+</pre>
+
+#切换主题
+可以通过如下命令来回切换主题:
+>rake theme:switch name="the-program"
+<pre>
+Administrator@PC121106ZS04 /f/cinowu.github.io (master)
+$ rake theme:switch name="twitter"
+Generating 'twitter' layout: default.html
+Generating 'twitter' layout: page.html
+Generating 'twitter' layout: post.html
+=> Theme successfully switched!
+=> Reload your web-page to check it out =)
+</pre>
+
+##博客相关配置
+编辑./_config.yml
+###更改博客文章url展现方式
+通过`permalink: /:categories/:year/:month/:day/:title/`这个配置  
+可以参考<http://jekyllrb.com/docs/permalinks/>
+
+###1.引入第三方评论
+参考：<http://www.liaolz.com/2013-04-20-how-to-use-duoshuo-on-jekyll/>  
+bootstrap默认使用的[Disqus](http://disqus.com/)评论，如下：
+<pre>
+ comments :
+    provider : disqus
+    disqus :
+      short_name : jekyllbootstrap
+    livefyre :
+      site_id : 123
+    intensedebate :
+      account : 123abc
+    facebook :
+      appid : 123
+      num_posts: 5
+      width: 580
+      colorscheme: light
+</pre>
+
+当然你也可以选择使用其他国外的评论系统如[Intense Debate](http://intensedebate.com/), [livefyre](http://www.livefyre.com/), 和 [Facebook Comments](https://developers.facebook.com/docs/reference/plugins/comments/).
+
+这里我没有选择国外评论系统，而是选择了国内最大的[多说duoshuo](http://duoshuo.com/)评论系统
+
+####>>1.1添加步骤
+1.登录多说（我使用的是新浪微博登录），修改个人资料的名字为唯一名  
+2.创建站点<http://duoshuo.com/create-site>，填写必要的信息，然后生成一段通用JS。  
+  可以通过<http://cinowu.duoshuo.com/admin/>管理评论后台  
+3.修改_config.yml
+<pre>
+ comments :
+    provider : duoshuo
+    duoshuo :
+      name : cinowu
+    disqus :
+      short_name : 你的disqus唯一名
+    livefyre :
+      site_id : 123
+    intensedebate :
+      account : 123abc
+    facebook :
+      appid : 123
+      num_posts: 5
+      width: 580
+      colorscheme: light
+</pre>
+注意上面cinowu就是你的duoshuo唯一名，如下这段是改动的地方
+<pre>
+    provider : duoshuo
+    duoshuo :
+      name : cinowu
+</pre>
+
+4.添加duoshuo文件  
+在_includes\JB\comments-providers目录下创建文件duoshuo,填充入duoshuo上生成的[js代码](http://cinowu.duoshuo.com/admin/tools/)
+
+5.修改comments代码  
+修改_includes\JB\comments文件，加入一段代码块如下：
+<pre>
+{% when "duoshuo" %}
+  {% include JB/comments-providers/duoshuo %}
+</pre>
+
+6.OK，然后执行添加提交上传命令即可
+>git add --all
+>
+>git commit -m "add duoshuo comments"
+>
+>git push origin master
+
+####>>1.2修改多说评论框样式
+参考<http://liberize.me/post/jekyll-use-duoshuo-comment-system>  
+最近比较流行圆形头像，咱也来试试。在你的 css 文件中添加以下代码，不仅可以让头像变成圆形，还可以让头像在鼠标放上去时进行360度旋转哦。
+在_includes\JB\comments-providers\duoshuo上方添加如下css代码
+```css
+<style type="text/css">
+#ds-reset .ds-avatar img {
+  width: 54px !important;
+  height: 54px !important;
+  -webkit-border-radius: 27px !important;
+  -moz-border-radius: 27px !important;
+  border-radius: 27px !important;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+}
+#ds-reset .ds-avatar img:hover {
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+}
+</style>
+```
+本地调试发现，图像果然变圆了，还能旋转，酷！
+
+不喜欢评论框底下显示“xx正在使用多说”等字样？咱把它隐藏掉！
+```css
+#ds-reset .ds-powered-by {
+  display: none;
+}
+```
+
+如果文章长度比较短，后面有大片空白，可能会出现多说评论框没有紧贴着文章末尾，而是显示在中间，不用担心，加入以下代码就解决了！
+```css
+#ds-thread {
+  clear: none !important;
+  float: left;
+  margin-top: 0;
+  width: 100%;
+}
+```
+
+
+####>>1.3禁用评论
+- 全局禁用  
+	修改_config.yml
+	>provider: false
+- 单篇文章禁用
+	在_posts里每篇文章前添加`comments : false`
+	<pre>
+	---
+	layout: post
+	category : lessons
+	comments : false
+	tags : [yay]
+	---
+	</pre>
+	
+
+
+
+###>>1.3添加返回顶部按钮
+在根目录下创建css和js目录  
+css\to-top.css内容如下：
+```css
+#back-top {
+  position: fixed;
+  bottom: 30px;
+  margin-left: 1040px;
+}
+#back-top a {
+  width: 54px;
+  height: 54px;
+  display: block;
+  background: #ddd url(../img/bg_up_arrow.png) no-repeat center center;
+  background-color: #aaa;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover {
+  background-color: #777;
+}
+```
+由于用到了图片，所以在根目录创建img目录，将bg_up_arrow.png这个图片放入进去即可
+
+
+
+
+js\to-top.js内容如下：
+```javascript
+$("#back-top").hide();
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#back-top').fadeIn();
+    } else {
+      $('#back-top').fadeOut();
+    }
+  });
+  $('#back-top a').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+  });
+});
+```
+
+光有这个js还不够，因为是用到jquery语法，所以js目录还应有个jquery-1.7.2.js
+
+
+在_includes\目录下新建widgets目录，在widgets目录中创建back_top_button文件，填充如下内容:
+```html
+<div id="back-top">
+  <a href="#top" title="回到顶部"></a>
+</div>
+<script src="/js/to-top.js" type="text/javascript"></script>
+```
+
+
+修改_includes\themes\the-program\default.html添加到如下地方
+```hml
+	</div><!-- body -->
+	{% include widgets/back_top_button %}
+	<footer class="the-footer">
+```
+
+
+
+
+###修改侧边导航名称
+修改_includes\themes\the-program\default.html如下：
+```html
+<nav class="nav-global">
+	<ul>
+		<li class="logo"><a href="/">{{ site.title }}</a></li>
+		<li class="archive"><a href="/archive.html">最近发表</a></li>
+		<!--<li class="page"><a href="/pages.html">pages</a></li>-->
+		<li class="category"><a href="/categories.html">文章分类</a></li>
+		<li class="tag"><a href="/tags.html">标签云</a></li>
+		<li class="forkme"><div><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=plusjade&repo=jekyll-bootstrap&type=fork&count=true"
+					allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe></div></li>
+	</ul>
+</nav>
+```
+
+每个导航对应根目录下有一个响应的html，你可以自由增删
+
+
+
+
+###网站图标  
+你还可以在网站的根目录下一个网站图标文件favicon.ico，样别人访问你的网站时，体验会更好一点。设计优秀的网站图标，能帮助访问者，更容易记住你的网站哦！  
+可以通过<http://www.ico.la/>制作一张ico图标，选择像素32*32的即可
+
+###引入第三方网站分析
+这里我们选择的是百度分析，毕竟国内百度做的还不错，google经常访问不上
+这个流程跟评论系统安装是一样的.
+
+1.首先到[百度站长平台](http://zhanzhang.baidu.com/site/index)注册账号,添加自己的网站  
+2.然后到[百度网站中心](http://sitecenter.baidu.com/)获取js代码
+```javascript
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5243f16e8323cfb1f459827ff821aff7' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+```
+
+注意这里的`h.js%3F`后面跟着的那一大长串就是百度分析的tracking_id
+
+3.修改_config.yml文件，如下
+<pre>
+  analytics :
+    provider : baidu
+    baidu : 
+        tracking_id : '5243f16e8323cfb1f459827ff821aff7'
+</pre>
+
+4.在_includes\JB\analytics-providers创建baidu文件，填充如下内容:
+```javascript
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F{{ site.JB.analytics.baidu.tracking_id }}' type='text/javascript'%3E%3C/script%3E"));
+</script>
+```
+
+5.修改_includes\JB\analytics文件中的语句，添加如下代码块：
+<pre>
+{% when "baidu" %}
+  {% include JB/analytics-providers/baidu %}
+</pre>
+
+6.这个时候添加提交上传，然后再回到[百度统计](http://tongji.baidu.com/web/6970912/overview/sole?siteId=4244648)页面查看是否有数据，一般添加代码正确后生成数据到百度需要20多分钟。代码安装是否正确，请查看<http://sitecenter.baidu.com/sc-web/6970912/home/js/check?siteId=4244648>。
+安装正确后你会发现你的网站最下边会多出百度统计的图标,这个图标可以在百度后台切换的。
+
+- [百度站长](http://zhanzhang.baidu.com/)
+- [百度统计](http://tongji.baidu.com/)
+
+
+###一键分享
+国内目前有bshare、百度分享和jiathis，我选用了百度分享和bshare
+
+直接复制生成的代码到模板默认页面:_includes\themes\the-program\default.html里：  
+```html
+<!--baidushare begin-->
+			<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_kaixin001" data-cmd="kaixin001" title="分享到开心网"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{},"image":{"viewList":["tsina","tqq","weixin","qzone","kaixin001","renren"],"viewText":"分享到：","viewSize":"32"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","tqq","weixin","qzone","kaixin001","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			<!--baidushare end-->
+				<div class="entry-content">
+					{{ content }}
+				</div>
+				<!-- JiaThis Button BEGIN -->
+				<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;btn=r5.gif" charset="utf-8"></script>
+				<!-- JiaThis Button END -->
+
+```
+
+可以通过这两家分享网站的账号进行数据分析
+
+
+
+###cdn加速
+
+###搜索框
+
+###七牛云存储
+
+###文章草稿
+<http://higrid.net/c-art-jekyll_post_draft.htm>
+
+###代码高亮
+
+###网站许可
+<http://creativecommons.org/licenses/by-nc-sa/3.0/cn/>
+
+###日历
+
+###reboot
+
+###新浪微博
+
+###友情链接
+
+###旧博客迁移
+<http://jser.me/2013/07/28/%E6%97%A7blog%E8%BF%81%E7%A7%BB%E5%88%B0jekyll%2Bgithub.html>
