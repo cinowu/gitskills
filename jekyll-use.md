@@ -1,4 +1,4 @@
-#Windows安装jekyll
+ #Windows安装jekyll
 
 ##准备环境
 1. 安装[ruby](http://rubyinstaller.org/downloads/)  
@@ -418,8 +418,17 @@ Octopress 文章多了编译难免很慢
 
 当你开始搭建一个个人博客的时候，会出现类似这么多的博客系统干扰你，我要坚持搞好jekyll!!!
 
+###Toto
+Toto是一个快捷的建立博客的工具，它的宣言就是十分钟建立一个博客。建站成功后有一个Achives列表模板和Article模板，可定制性非常强，也就是说需要有着很强的折腾精神。作者看到了一个用Toto搭建起来的博客，界面还是非常漂亮地，访问地址：使toto支持中文的技巧分享。  
+Toto主页：<http://cloudhead.io/toto>  
+Toto代码：<https://github.com/cloudhead/toto>  
 
 
+jekyll、Toto和Octopress都是基于Ruby语言的，具体的安装方法可以在网上或对应主页查到
+
+搭建博客可用的工具还有Bonsai和轻量级web框架Snatra等等，如果你够Geek，也可以去折腾折腾。
+
+选定一个博客工具后，就可以将它部署到免费的云服务提供商那里，如Heroku、Github等，当然，你也可以部署到你自己的主机空间。
 ##接下来jekyll要做的事情
 - 选择主题 
 - 加上第三方评论系统
@@ -780,7 +789,7 @@ bootstrap默认使用的[Disqus](http://disqus.com/)评论，如下：
 
 当然你也可以选择使用其他国外的评论系统如[Intense Debate](http://intensedebate.com/), [livefyre](http://www.livefyre.com/), 和 [Facebook Comments](https://developers.facebook.com/docs/reference/plugins/comments/).
 
-这里我没有选择国外评论系统，而是选择了国内最大的[多说duoshuo](http://duoshuo.com/)评论系统
+这里我没有选择国外评论系统，而是选择了国内最大的[多说duoshuo](http://duoshuo.com/)评论系统。当然国内还可以选择[搜狐畅言](http://changyan.sohu.com/)。
 
 ####>>1.1添加步骤
 1.登录多说（我使用的是新浪微博登录），修改个人资料的名字为唯一名  
@@ -1033,7 +1042,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
 
 ###一键分享
-国内目前有bshare、百度分享和jiathis，我选用了百度分享和bshare
+国内目前有bshare、百度分享和jiathis，我选用了百度分享
 
 直接复制生成的代码到模板默认页面:_includes\themes\the-program\default.html里：  
 ```html
@@ -1050,31 +1059,279 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
 ```
 
-可以通过这两家分享网站的账号进行数据分析
+可以通过百度分享账号进行数据分析  
+
+- [百度分享](http://share.baidu.com/)  
 
 
+###友情链接
+这个很容易
 
-###cdn加速
 
-###搜索框
+###标签云
+可以下载<https://github.com/roytanck/cumulus>里面的内容，然后像添加其他侧边栏一样添加这个云标签即可，不过我还没有研究动态生成标签，所有的标签都是我手动写到tagcloud.xml里面的，为了好看，也只能这样啦
 
-###七牛云存储
+###时钟日历
+时钟这个好弄，网上找了一个.日历没什么实际作用，不用了.
+
+###图片轮播
+我采用的是jvm image imagerotator，可参考<http://www.sfirelife.com/?p=1594>，下载一个包即可使用,将图片地址定义在madrid.xml文件中即可
+
+###3D地图
+参考<http://www.revolvermaps.com/>非常好弄
+还有这个<http://clustrmaps.com/zh/index.htm>
+
+###站内搜索框
+参考  
+<http://www.shanhh.com/blog/2012/11/16/tapir-search-for-jekyll/>  
+<http://luyueming.info/blog/2013/05/21/add-static-search-with-tapir-in-your-blog>
+1.首先修改根目录下atom.xml如下：
+```xml
+---
+layout: nil
+title : Atom Feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>{{ site.title }}</title>
+ <link href="{{ site.production_url }}/{{ site.atom_path }}" rel="self"/>
+ <link href="{{ site.production_url }}"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.production_url }}</id>
+ <author>
+   <name>{{ site.author.name }}</name>
+   <email>{{ site.author.email }}</email>
+ </author>
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="{{ site.production_url }}{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>{{ site.production_url }}{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+   <summary type="html">{{ post.description | xml_escape }}</summary>
+ </entry>
+ {% endfor %}
+ 
+</feed>
+```
+
+2.添加如下这么一段到_layouts\default.xml中
+```html
+<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+```
+
+3.访问<http://localhost:4000/atom.xml>能够完整显示，表示配置正确，然后部署到github
+这时候的地址就是<http://cinowu.github.io/atom.xml>
+
+4.使用<http://cinowu.github.io/atom.xml>到<http://tapirgo.com/>上面去注册，需要输入一个邮箱地址，然后点击GO,这时候生成一个token和一个secret token，注意保存好你的这两个值。
+token这个值是待会配置需要的。
+
+5.等待一到两分钟，tapirgo会根据你刚才的FEED地址进行索引构建，这时可以通过<http://tapirgo.com/api/1/search.json?token=52e20631a042b60200000001&query=my>这个链接访问，返回的结果是JSON，正确
+
+6.下载[jquery-tapir.min.js](https://github.com/TapirGo/jQuery-Plugin)这个文件到你的js目录中
+
+7.在_layouts\default.html中引入这个js:
+```javascript
+<script src="/js/jquery-tapir.min.js"></script>
+```
+
+8.在页面合适位置上创建一个搜索框：
+```html
+ <div align='left'>
+	<form class="navbar-form" action="/search.html">
+		<input type="text" class="form-control" placeholder="Search" name="query">
+	</form>				  
+ </div>
+```
+注意上面的这个，一定不能少了`name=query`这一个属性
+
+
+9.因为搜索框请求了根目录下search.html，所以创建search.html:
+```html
+---
+layout: page
+title: 站内搜索 
+header: Pages
+---
+<h2><font color='red'>搜索结果</font></h2>
+  <div id="search_results"></div>
+<script>
+	$('#search_results').tapir({'token': '52e20631a042b60200000001'});
+</script>
+```
+
+10.ok本地调试，可以搜到结果了，部署到github，缺陷是只能使用英文搜索
+
+
+因为如上不能支持中文，所以我换了种，请参考<http://liberize.me/post/jekyll-static-blog-search.html>
+
+###rss订阅
+到http://www.feedsky.com/注册一个订阅地址
+你的永久Feed地址为：
+http://feed.feedsky.com/lmn5
+然后会生成一段代码贴到博客中
+
+###jekyll-cli
+<https://github.com/jsw0528/jekyll-cli>
+
+###page rank
+http://www.prchecker.info/
+
+###一键关注按钮，微博挂件（也称微博秀）
+http://dev.t.qq.com/websites/useread?explain=1
+http://open.weibo.com/widget/followbutton.php
+
+http://app.weibo.com/tool/blogwidget/setting?id=12&ver=3
+http://dev.t.qq.com/websites/useshow3?explain=3
+
+
+###分页
+因为有上一篇和下一篇，就不用做了
+
+###点击分析
+http://www.clicki.cn/
+
+###网站流量统计
+http://statcounter.com/ 
+添加JS代码到网站，就能看到访客第多少多少位图标
+
+###原创网络电台，背景音乐
+<http://www.luocheng.cn/>
+参考<http://wpaudioplayer.com/standalone/>
+
+###sitemap
+删掉默认带的sitemap.txt，新建个sitemap.xml,填充如下内容：  
+```xml
+---
+# Remember to set production_url in your _config.yml file!
+title : Sitemap
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for post in site.posts %}
+    <url>
+      <loc>{{ site.production_url }}{{ post.url }}</loc>
+      <changefreq>daily</changefreq>
+      <lastmod>{{ post.date | date: "%Y-%m-%d"}}</lastmod>
+      <priority>1.0</priority>
+    </url>
+    {% endfor %}
+
+    {% for page in site.pages %}
+    {% if page.layout != nil %}
+    {% if page.layout != 'feed' %}
+    {% if page.group == 'navigation' %}
+    <url>
+      <loc>{{ site.production_url }}{{ page.url | remove: 'index.html' }}</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+    </url>
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    <url>
+      <loc>{{ site.production_url }}</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.6</priority>
+    </url>
+</urlset>
+```
+
+###
+网站优化，广告，SEO
+
+###在线简历
+https://about.me/
+
+###二维码，微信
+已经加上
+
+###相册
+图片放大效果：jquery.imagezoom.v1.0
+利用http://pic.sdodo.com/tool/picadjust/进行小图40X40和中图310X310的裁剪
+或者imagerotator
+
+###文章导航article_nav
+<http://dannpu.com/blog/2013/12/20/Minimum-Rank-Solutions/>
 
 ###文章草稿
 <http://higrid.net/c-art-jekyll_post_draft.htm>
 
 ###代码高亮
+不用做高亮了，markdown的高亮即可.
+
+###reboot
+当不想被搜索引擎抓取的时候可以配置这个
+
+###百度加速乐
+http://jiasule.baidu.com/
+在您的网站遭受大规模DDOS攻击、监管部门要求对违规信息进行处理等紧急情况时，百度加速乐客服可能会通过电话、QQ等方式及时联系您，在此百度加速乐希望您完善以下资料，以便我们为您的网站提供更优质的服务！
+
+###七牛云存储
+会将所有静态资源都放到云存储上
+我的邀请链接：https://portal.qiniu.com/signup?code=gmnfuiugtoy
+
+<pre>
+使用 Github Page 的博客由于服务器在国外，访问速度不佳，可以使用国内的 CDN 服务存储图片、js/css 等静态文件来为网站提速。事实上，因为整个网站都是静态的，可以把所有文件都放在 CDN 服务器上，但是这样就无法使用 Git 了。如果使用 Bootstrap 框架，可以将 assets 文件夹和图像放在 CDN 服务器上，以兼顾两头。
+
+目前国内的 CDN 提供商有七牛、又拍等，此处选择七牛。七牛按存储空间、流量、请求次数计费，提供一定的免费额度，对于小站来说基本够用了，而且还有一些优惠活动。如果还没有七牛账号，可以点这里注册（这是我的邀请链接）。
+
+假设网站资源文件都放在 /assets 目录下，图片放在 /images 目录下，要将这两个文件夹里的内容使用七牛加速，可以参考以下做法。
+
+一、设置七牛
+
+在七牛新建一个 bucket，命名为 liberize，设置为公开空间，则这个 bucket 里面的内容可以通过 liberize.u.qiniudn.com 访问。在"空间设置" - "基本设置" - "镜像存储"里面设置镜像源为博客地址 http://liberize.me/。设置了镜像存储以后，当访问 bucket 里面不存在的内容时会自动从镜像源获取。
+
+二、修改_config.xml
+
+在 _config.xml 文件中按如下设置。
+
+safe: false
+cdn_url : http://liberize.u.qiniudn.com
+
+JB :
+  ASSET_PATH : false
+  IMAGE_PATH : false
+三、修改_includes/JB/setup
+
+修改 _includes/JB/setup 里面 {% if site.JB.ASSET_PATH %} 语句块，增加对 site.safe 的判断，同时类比写出 IMAGE_PATH 部分。这么做的好处是本地测试时将使用本地资源，而提交到 GitHub 后，将自动使用 site.cdn_url 指定的 CDN 服务器上的资源。为什么会有这种效果呢？因为 GitHub 默认是禁止插件的，在运行 jekyll 时会加上 --safe 参数，这将会覆盖 _config.yml 中的 safe: false 设置。
+
+{% if site.JB.ASSET_PATH %}
+  {% assign ASSET_PATH = site.JB.ASSET_PATH %}
+{% elsif site.safe %}
+  {% capture ASSET_PATH %}{{ site.cdn_url }}/assets/themes/{{ page.theme.name }}{% endcapture %}
+{% else %}
+  {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{{ page.theme.name }}{% endcapture %}
+{% endif %}
+
+{% if site.JB.IMAGE_PATH %}
+  {% assign IMAGE_PATH = site.JB.IMAGE_PATH %}
+{% elsif site.safe %}
+  {% capture IMAGE_PATH %}{{ site.cdn_url }}/images{% endcapture %}
+{% else %}
+  {% capture IMAGE_PATH %}{{ BASE_PATH }}/images{% endcapture %}
+{% endif %}
+以后需要在文章中插入图片时，只需将图片放到 /images 文件夹，然后使用 {{ IMAGE_PATH }}/图片文件名 格式就可以了。由于设置了镜像存储，不需要手动上传，但是当更改了 /assets 或 /images 里面的文件时，应当删除七牛服务器上的对应资源，否则访问的仍然是旧的资源。
+
+除了用来做图床、CDN 加速以外，七牛还有图片处理（缩放、旋转、打水印等）、防盗链等功能，请参考官方文档。
+</pre>
+
+###cdn加速
+
+
+###旧博客迁移
+由于不是wordpress，所以iteye的迁移还得一步步手工完成
 
 ###网站许可
 <http://creativecommons.org/licenses/by-nc-sa/3.0/cn/>
+<http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh>
 
-###日历
 
-###reboot
 
-###新浪微博
 
-###友情链接
 
-###旧博客迁移
-<http://jser.me/2013/07/28/%E6%97%A7blog%E8%BF%81%E7%A7%BB%E5%88%B0jekyll%2Bgithub.html>
+#最后鸣谢
+liberize.github.com，所有我博客整体板式是参照他的博客进行改造的。
