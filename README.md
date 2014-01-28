@@ -4,6 +4,7 @@
 
 - [在线MarkDown](http://www.zybuluo.com/mdeditor)
 
+- <https://choir.io/player/beachmonks/github>
 
 
 #windows安装Git客户端：
