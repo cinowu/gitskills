@@ -431,7 +431,9 @@ jekyll、Toto和Octopress都是基于Ruby语言的，具体的安装方法可以
 选定一个博客工具后，就可以将它部署到免费的云服务提供商那里，如Heroku、Github等，当然，你也可以部署到你自己的主机空间。
 ##接下来jekyll要做的事情
 - 选择主题 
-- 加上第三方评论系统
+- 加上第三方
+- 
+- 系统
 - 接入新浪腾讯微博
 - 加入Google Analytics
 - 加入Google Webmasters
