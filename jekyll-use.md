@@ -1072,6 +1072,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 可以下载<https://github.com/roytanck/cumulus>里面的内容，然后像添加其他侧边栏一样添加这个云标签即可，不过我还没有研究动态生成标签，所有的标签都是我手动写到tagcloud.xml里面的，为了好看，也只能这样啦
 
 ###时钟日历
+<http://www.clocklink.com/gallery.php?category=HTML5>  
 时钟这个好弄，网上找了一个.日历没什么实际作用，不用了.
 
 ###图片轮播
