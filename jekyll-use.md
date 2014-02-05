@@ -1073,7 +1073,9 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
 ###时钟日历
 <http://www.clocklink.com/gallery.php?category=HTML5>  
-时钟这个好弄，网上找了一个.日历没什么实际作用，不用了.
+时钟这个好弄，网上找了一个.日历没什么实际作用，不用了.  
+日本时钟<http://chabudai.org/blog/?p=59>
+
 
 ###图片轮播
 我采用的是jvm image imagerotator，可参考<http://www.sfirelife.com/?p=1594>，下载一个包即可使用,将图片地址定义在madrid.xml文件中即可
@@ -1081,6 +1083,12 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 ###3D地图
 参考<http://www.revolvermaps.com/>非常好弄
 还有这个<http://clustrmaps.com/zh/index.htm>
+
+###实时统计系统  
+<http://www.chinaz.com/free/2010/0811/125807.shtml>
+
+国内的有<http://www.clicki.cn/>，还有<http://cnzz.com/>
+
 
 ###站内搜索框
 参考  
