@@ -18,12 +18,23 @@
 - Ultraedit
 - Gvim
 
+##视频播放器
+- vlc media player
+- potplayer
+
+##本地搜索
+- everything
+- 光速搜索
+
+##快速拷贝
+- FastCopy
 
 ##画图软件
 - 亿图图示
 - Mindjet思维导图
 - 小Q画笔
-- 印象笔记.圈点
+- 印象笔记.圈点/Skitch
+- pencil
 
 
 ##个人知识库
@@ -36,7 +47,7 @@
 - HeidiSQL
 - MySQL Workbench
 - Navicat
-
+- SQLyog
 ##Java自带数据库
 - sqliteman
 
@@ -67,13 +78,15 @@ redis-cli.exe -h remotehost -p 6379
 - IETester
 
 ##压力测试
+- soapUI
 
 
 ##字体变化
 - 字体管家
 
 ##壁纸
-1. 爱壁纸
+- 爱壁纸
+- 必应缤纷桌面
 
 ##云盘
 - 百度云管家
@@ -97,19 +110,22 @@ redis-cli.exe -h remotehost -p 6379
 - LibreOffice
 - Apache_OpenOffice
 
+##图片软件
+- picasa
+
 ##安卓应用
-咕咚运动
-开迅视频
-今日头条
-手机百度
-心理FM
-蜻蜓FM
-网易公开课
-快牙
-正点闹钟
-猎豹清理大师
-魔漫相机
-水印相机
+- 咕咚运动
+- 开迅视频
+- 今日头条
+- 手机百度
+- 心理FM
+- 蜻蜓FM
+- 网易公开课
+- 快牙
+- 正点闹钟
+- 猎豹清理大师
+- 魔漫相机
+- 水印相机
 
 
 ##音乐打包工具(可打包音乐生成APK文件)  
@@ -121,3 +137,7 @@ redis-cli.exe -h remotehost -p 6379
 
 ##远程桌面连接
 - VNC-Viewer
+
+##儿童应用
+- 贝瓦音乐
+

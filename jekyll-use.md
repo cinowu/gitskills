@@ -1340,7 +1340,10 @@ JB :
 <http://creativecommons.org/licenses/by-nc-sa/3.0/cn/>
 <http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh>
 
-
+##近期需要
+<http://cnbootstrap.com/>  
+<http://brackets.io/>  
+创业企业开始用.co、.me、.io 和其他非.com 域名创业，获得了成功。HelloBrit.com 改成了 Brit.co，BarkBox.com 改成了 Bark.co，.io 域名也因为 TechCrunch Disrupt 大会的火爆而备受关注。年初，.xyz 顶级域名上线，根据域名商 NamesCon 的预测， 2014 年一年之内，将有超过 100 万个.xyz 域名被注册
 
 
 
