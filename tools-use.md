@@ -8,6 +8,10 @@
   需要安装很多[eclipse插件](https://github.com/cinowu/javaskills/blob/master/README.md)
 - IntelliJ IDEA
 
+##JavaWeb服务器
+- tomcat
+- jetty
+
 ##文本编辑器
 - GNU Emacs
 - Sublime Text
@@ -21,6 +25,13 @@
 ##视频播放器
 - vlc media player
 - potplayer
+
+##音乐播放器
+- 轻听音乐播放器
+- 多米
+
+##linux模拟
+- cygwin
 
 ##本地搜索
 - everything
@@ -48,8 +59,12 @@
 - MySQL Workbench
 - Navicat
 - SQLyog
+
 ##Java自带数据库
-- sqliteman
+- derby
+
+##轻型数据库
+- SQLite
 
 ##Java自带监控
 - jvisualvm
@@ -79,7 +94,20 @@ redis-cli.exe -h remotehost -p 6379
 
 ##压力测试
 - soapUI
+- jmeter
 
+##邮件服务
+- foxmail
+
+##代理服务器
+- nginx
+- lighttpd
+
+##代理
+- goagent
+
+##敏捷开发
+- jenkins
 
 ##字体变化
 - 字体管家
@@ -134,6 +162,7 @@ redis-cli.exe -h remotehost -p 6379
 ##linxu终端
 - winscp
 - putty
+- SecureCRT
 
 ##远程桌面连接
 - VNC-Viewer
@@ -141,3 +170,10 @@ redis-cli.exe -h remotehost -p 6379
 ##儿童应用
 - 贝瓦音乐
 
+##热门语言
+- python (web.py框架)
+- groovy (play框架)
+- Erlang
+- go
+- node.js
+- Scala
