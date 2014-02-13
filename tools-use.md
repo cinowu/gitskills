@@ -21,13 +21,18 @@
 - EverEdit
 - Ultraedit
 - Gvim
+- emacs
 
 ##视频播放器
 - vlc media player
 - potplayer
+- KMPlayer
 
 ##音乐播放器
 - 轻听音乐播放器
+- aimp
+- AIRPLAY
+- foobar
 - 多米
 
 ##linux模拟
@@ -177,3 +182,4 @@ redis-cli.exe -h remotehost -p 6379
 - go
 - node.js
 - Scala
+- red-lang

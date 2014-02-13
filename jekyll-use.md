@@ -1374,6 +1374,17 @@ JB :
 <http://brackets.io/>  
 创业企业开始用.co、.me、.io 和其他非.com 域名创业，获得了成功。HelloBrit.com 改成了 Brit.co，BarkBox.com 改成了 Bark.co，.io 域名也因为 TechCrunch Disrupt 大会的火爆而备受关注。年初，.xyz 顶级域名上线，根据域名商 NamesCon 的预测， 2014 年一年之内，将有超过 100 万个.xyz 域名被注册
 
+<http://www.miibeian.gov.cn>  
+国内注册的域名，没有明确要备案，
+主要是 只要使用国内主机就必须要备案，如果使用美国主机，或者香港主机等国外主机则都不需要备案，
+国内备案免费不过很慢，而且手续复杂，建议使用国外双线空间，我的www.bestbabycn.com就是使用的美国DH空间，速度比不上国内，但也算可以！
+希望这个问题能够对你有所帮助
+
+
+提交资料时间：
+新注域名：需在域名付费后1天内提供扫描件至万网，万网接收资料并初审后递交至CNNIC审核。
+[注]未及时送达资料或未通过CNNIC审核的域名将会注册失败并从会员账号下删除，域名注册费将退至该会员帐户中。 
+
 您的域名资料已经提交，万网将会对您提交的资料和注册信息的一致性进行比对审核，最终审核结果请到“域名管理”中查看！注：国际域名资料的审核结果将不会影响到您域名的使
 
 用免费的dnsPod做域名解析  
@@ -1391,6 +1402,36 @@ https://help.github.com/articles/setting-up-a-custom-domain-with-pages
 http://www.360doc.com/content/12/0213/14/1016783_186293045.shtml
 
 http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html
+
+
+#绑定域名步骤：
+<pre>
+在本地代码库里新建名为CNAME文本文件，在Terminal中输入，以为例:example.com 
+  echo 'codewu.com' > CNAME
+然后push
+  git add CNAME
+  git commit -am "CNAME ADDED"
+  git push
+  登陆域名管理，在域名解析中添加  
+- 主机记录：@
+- 记录类型：A
+- 路线类型：默认
+- 记录值：204.232.175.78
+- 其他：默认
+此步骤只适合绑定顶级域名（我的配置就是这种）
+
+如果CNAME文件中配置的是www.codewu.com那么就是二级域名了，域名解析添加的时候就应该选择
+CNAME类型，记录值指向cinowu.github.io
+
+这两种方式生效时间都是10分钟左右
+
+
+这时候访问cinowu.github.io或者codewu.com都能生效
+
+可以通过dig codewu.com +nostats +nocomments +nocmd查看域名解析
+
+https://github.com/jekyll/jekyll/wiki/Sites
+</pre>
 
 #最后鸣谢
 liberize.github.com，所有我博客整体板式是参照他的博客进行改造的。
