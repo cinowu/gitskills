@@ -175,6 +175,13 @@ redis-cli.exe -h remotehost -p 6379
 ##儿童应用
 - 贝瓦音乐
 
+##在线头像设计
+- <http://www.faceyourmanga.com/editmangatar.php>
+- <http://www.reasonablyclever.com/mini-mizers/blockhead/>
+- <http://www.onlinewahn.de/generator/muenze.php>
+- <http://www.morphases.com/editor/>
+- <http://www.buildyourwildself.com/>
+
 ##热门语言
 - python (web.py框架)
 - groovy (play框架)
