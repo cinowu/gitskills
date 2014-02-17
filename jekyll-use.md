@@ -791,7 +791,8 @@ bootstrap默认使用的[Disqus](http://disqus.com/)评论，如下：
 
 当然你也可以选择使用其他国外的评论系统如[Intense Debate](http://intensedebate.com/), [livefyre](http://www.livefyre.com/), 和 [Facebook Comments](https://developers.facebook.com/docs/reference/plugins/comments/).
 
-这里我没有选择国外评论系统，而是选择了国内最大的[多说duoshuo](http://duoshuo.com/)评论系统。当然国内还可以选择[搜狐畅言](http://changyan.sohu.com/)。
+这里我没有选择国外评论系统，而是选择了国内最大的[多说duoshuo](http://duoshuo.com/)评论系统。当然国内还可以选择[搜狐畅言](http://changyan.sohu.com/)。  
+<http://dev.duoshuo.com/docs/5020f288e759c1107f00000c>
 
 ####>>1.1添加步骤
 1.登录多说（我使用的是新浪微博登录），修改个人资料的名字为唯一名  
@@ -1432,6 +1433,11 @@ CNAME类型，记录值指向cinowu.github.io
 
 https://github.com/jekyll/jekyll/wiki/Sites
 </pre>
+
+#微博开放平台
+<http://dev.t.qq.com/>
+<http://open.weibo.com/wiki/index.php/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97>
+
 
 #最后鸣谢
 liberize.github.com，所有我博客整体板式是参照他的博客进行改造的。
