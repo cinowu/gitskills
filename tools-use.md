@@ -6,6 +6,7 @@
 ##IDE
 - eclipse
   需要安装很多[eclipse插件](https://github.com/cinowu/javaskills/blob/master/README.md)
+- [easyeclipse](http://www.easyeclipse.org/site/home/)
 - IntelliJ IDEA
 
 ##JavaWeb服务器
@@ -171,6 +172,10 @@ redis-cli.exe -h remotehost -p 6379
 
 ##远程桌面连接
 - VNC-Viewer
+
+
+##团队协作工具
+<https://fengche.co/>
 
 ##儿童应用
 - 贝瓦音乐
