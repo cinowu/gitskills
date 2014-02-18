@@ -1,9 +1,10 @@
 #gitskills前言
 ##工具
 - MarkDownPad
-
-- [在线MarkDown](http://www.zybuluo.com/mdeditor)
-
+- [在线MarkDown1](http://www.zybuluo.com/mdeditor)
+- [在线MarkDown2](http://mahua.jser.me/)
+- [在线MarkDown3](http://dillinger.io/)
+- [各种文档之间转换](http://johnmacfarlane.net/pandoc/try/)
 - <https://choir.io/player/beachmonks/github>
 
 
