@@ -195,3 +195,11 @@ redis-cli.exe -h remotehost -p 6379
 - node.js
 - Scala
 - red-lang
+
+##chrome 插件
+- Dev HTTP Client
+- Halo Word Dictionary
+- HTML5全屏时钟APP
+- Proxy SwitchySharp
+- 有道云笔记网页剪报
+- 购物党
