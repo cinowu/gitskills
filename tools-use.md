@@ -117,8 +117,10 @@ redis-cli.exe -h remotehost -p 6379
 ##敏捷开发
 - jenkins
 
-##字体变化
+##字体
 - 字体管家
+- <http://www.qiuziti.com/>
+- [汉典书法](http://sf.zdic.net/)
 
 ##壁纸
 - 爱壁纸
