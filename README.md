@@ -6,6 +6,7 @@
 - [在线MarkDown3](http://dillinger.io/)
 - [各种文档之间转换](http://johnmacfarlane.net/pandoc/try/)
 - <https://choir.io/player/beachmonks/github>
+- <http://www.oschina.net/news/50322/markdown-editors-and-tools>
 
 
 #windows安装Git客户端：
