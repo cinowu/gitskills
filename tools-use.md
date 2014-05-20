@@ -24,6 +24,7 @@
 - Gvim
 - emacs
 - gedit - <http://ftp.gnome.org/pub/gnome/binaries/win32/gedit/>
+- SciTE
 
 ##视频播放器
 - vlc media player
