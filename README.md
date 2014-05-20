@@ -4,6 +4,7 @@
 - [在线MarkDown1](http://www.zybuluo.com/mdeditor)
 - [在线MarkDown2](http://mahua.jser.me/)
 - [在线MarkDown3](http://dillinger.io/)
+- [78款MarkDown工具](http://segmentfault.com/a/1190000000506986)
 - [各种文档之间转换](http://johnmacfarlane.net/pandoc/try/)
 - <https://choir.io/player/beachmonks/github>
 - <http://www.oschina.net/news/50322/markdown-editors-and-tools>
