@@ -25,6 +25,7 @@
 - emacs
 - gedit - <http://ftp.gnome.org/pub/gnome/binaries/win32/gedit/>
 - SciTE
+- EmEditor多标签编辑器
 
 ##视频播放器
 - vlc media player
