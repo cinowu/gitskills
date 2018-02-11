@@ -210,3 +210,6 @@ redis-cli.exe -h remotehost -p 6379
 - Proxy SwitchySharp
 - 有道云笔记网页剪报
 - 购物党
+
+##优秀软件集合
+- <http://loveorigin.appinn.com/>
